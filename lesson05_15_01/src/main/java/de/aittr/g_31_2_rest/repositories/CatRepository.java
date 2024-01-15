@@ -38,7 +38,7 @@ public class CatRepository implements CrudRepository<Cat>{
     }
 
     @Override
-    public void update(Cat obj) {
+    public void update(Cat cat) {
 
     }
 
