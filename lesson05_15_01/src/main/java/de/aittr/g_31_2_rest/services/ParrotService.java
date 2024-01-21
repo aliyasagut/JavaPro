@@ -22,4 +22,12 @@ public class ParrotService {
     public Parrot getById(int id) {
         return repository.getById(id);
     }
+
+    public void deleteById(int id) {
+        repository.deleteById(id);
+    }
+
+    public Parrot save(Parrot parrot) {
+        return repository.save(parrot);
+    }
 }

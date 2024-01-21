@@ -35,15 +35,7 @@ public class ParrotRepository implements CrudRepository<Parrot> {
         }
     }
 
-    @Override
-    public Parrot save(Parrot parrot) {
-        try (Connection connection = getConnection()) {
 
-        } catch (Exception e) {
-            throw new RuntimeException(e);
-        }
-        return null;
-    }
 
     @Override
     public List<Parrot> getAll() {
@@ -56,12 +48,11 @@ public class ParrotRepository implements CrudRepository<Parrot> {
             while (resultSet.next()) {
 //                int id = resultSet.getInt(1); вариант 1: передать номер колонки
                 int id = resultSet.getInt(ID); // вариант 2: передать название колонки
-                String color = resultSet.getNString(COLOR);
+                String color = resultSet.getString(COLOR);
                 double weight = resultSet.getDouble(WEIGHT);
                 Parrot parrot = new Parrot(id, color, weight);
                 parrots.add(parrot);
             }
-
             return parrots;
         } catch (Exception e) {
             throw new RuntimeException(e);
@@ -99,9 +90,25 @@ public class ParrotRepository implements CrudRepository<Parrot> {
     @Override
     public void deleteById(int id) {
         try (Connection connection = getConnection()) {
+            String query = String.format("DELETE FROM parrot WHERE id = %d;", id);
+            connection.createStatement().executeUpdate(query);
 
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
+    }
+
+    @Override
+    public Parrot save(Parrot parrot) {
+        try (Connection connection = getConnection()) {
+            String color = parrot.getColor();
+            double weight = parrot.getWeight();
+            String query = String.format("INSERT INTO parrot (color, weight) VALUES ('%s', %.2f);", color, weight);
+            connection.createStatement().executeUpdate(query);
+
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+        return parrot;
     }
 }
