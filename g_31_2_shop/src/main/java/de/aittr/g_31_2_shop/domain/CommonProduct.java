@@ -1,5 +1,7 @@
 package de.aittr.g_31_2_shop.domain;
 
+import de.aittr.g_31_2_shop.domain.interfaces.Product;
+
 import java.util.Objects;
 
 public class CommonProduct implements Product {
@@ -23,6 +25,11 @@ public class CommonProduct implements Product {
     @Override
     public int getId() {
         return id;
+    }
+
+    @Override
+    public void setId(int id) {
+        this.id = id;
     }
 
     @Override

@@ -1,4 +1,4 @@
-package de.aittr.g_31_2_shop.domain;
+package de.aittr.g_31_2_shop.domain.interfaces;
 
 public interface Product {
 
@@ -6,4 +6,5 @@ public interface Product {
     boolean isActive();
     String getName();
     double getPrice();
+    void setId(int id);
 }
