@@ -1,4 +1,4 @@
-package de.aittr.g_31_2_shop.domain;
+package de.aittr.g_31_2_shop.domain.jdbc;
 
 import de.aittr.g_31_2_shop.domain.interfaces.Cart;
 import de.aittr.g_31_2_shop.domain.interfaces.Customer;
@@ -59,5 +59,25 @@ public class CommonCustomer implements Customer {
     @Override
     public int hashCode() {
         return Objects.hash(id, isActive, name, cart);
+    }
+
+    @Override
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    @Override
+    public void setActive(boolean active) {
+        isActive = active;
+    }
+
+    @Override
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    @Override
+    public void setCart(Cart cart) {
+        this.cart = cart;
     }
 }
