@@ -3,14 +3,16 @@ package de.aittr.g_31_2_shop.services.jpa;
 import de.aittr.g_31_2_shop.domain.dto.ProductDto;
 import de.aittr.g_31_2_shop.domain.interfaces.Product;
 import de.aittr.g_31_2_shop.domain.jpa.JpaProduct;
-import de.aittr.g_31_2_shop.exception_handling.exceptions.FirstTestException;
 import de.aittr.g_31_2_shop.exception_handling.exceptions.FourthTestException;
-import de.aittr.g_31_2_shop.exception_handling.exceptions.SecondTestException;
 import de.aittr.g_31_2_shop.exception_handling.exceptions.ThirdTestException;
 import de.aittr.g_31_2_shop.repositories.jpa.JpaProductRepository;
 import de.aittr.g_31_2_shop.services.interfaces.ProductService;
 import de.aittr.g_31_2_shop.services.mapping.ProductMappingService;
 import jakarta.transaction.Transactional;
+import org.apache.logging.log4j.Level;
+import org.apache.logging.log4j.LogManager;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -20,6 +22,9 @@ public class JpaProductService implements ProductService {
 
     private JpaProductRepository repository;
     private ProductMappingService mappingService;
+//    private Logger logger = LogManager.getLogger(JpaProductService.class);
+    private Logger logger = LoggerFactory.getLogger(JpaProductService.class);
+
 
     public JpaProductService(JpaProductRepository repository, ProductMappingService mappingService) {
         this.repository = repository;
@@ -41,6 +46,7 @@ public class JpaProductService implements ProductService {
 
     @Override
     public List<ProductDto> getAllActiveProducts() {
+        // здесь будет join point, сюда будет внедряться вспомогательный код
         return repository.findAll()
                 .stream()
                 .filter(p -> p.isActive())
@@ -50,6 +56,16 @@ public class JpaProductService implements ProductService {
 
     @Override
     public ProductDto getActiveProductById(int id) {
+
+//        logger.log(Level.INFO, String.format("Запрошен продукт с идентификатором %d", id));
+//        logger.log(Level.WARN, String.format("Запрошен продукт с идентификатором %d", id));
+//        logger.log(Level.ERROR, String.format("Запрошен продукт с идентификатором %d", id));
+
+        logger.info(String.format("Запрошен продукт с идентификатором %d", id));
+        logger.warn(String.format("Запрошен продукт с идентификатором %d", id));
+        logger.error(String.format("Запрошен продукт с идентификатором %d", id));
+
+
         Product product = repository.findById(id).orElse(null);
 
         if (product != null && product.isActive()) {
