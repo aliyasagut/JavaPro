@@ -4,6 +4,7 @@ import de.aittr.g_31_2_shop.domain.dto.ProductDto;
 import de.aittr.g_31_2_shop.domain.interfaces.Product;
 import de.aittr.g_31_2_shop.domain.jpa.JpaProduct;
 import de.aittr.g_31_2_shop.exception_handling.exceptions.FourthTestException;
+import de.aittr.g_31_2_shop.exception_handling.exceptions.ProductValidationException;
 import de.aittr.g_31_2_shop.exception_handling.exceptions.ThirdTestException;
 import de.aittr.g_31_2_shop.repositories.jpa.JpaProductRepository;
 import de.aittr.g_31_2_shop.services.interfaces.ProductService;
@@ -40,7 +41,7 @@ public class JpaProductService implements ProductService {
             entity = repository.save(entity);
             return mappingService.mapProductEntityToDto(entity);
         } catch (Exception e) {
-            throw new FourthTestException(e.getMessage());
+            throw new ProductValidationException("Incorrect values of product fields", e);
         }
     }
 
@@ -61,9 +62,9 @@ public class JpaProductService implements ProductService {
 //        logger.log(Level.WARN, String.format("Запрошен продукт с идентификатором %d", id));
 //        logger.log(Level.ERROR, String.format("Запрошен продукт с идентификатором %d", id));
 
-        logger.info(String.format("Запрошен продукт с идентификатором %d", id));
-        logger.warn(String.format("Запрошен продукт с идентификатором %d", id));
-        logger.error(String.format("Запрошен продукт с идентификатором %d", id));
+//        logger.info(String.format("Запрошен продукт с идентификатором %d", id));
+//        logger.warn(String.format("Запрошен продукт с идентификатором %d", id));
+//        logger.error(String.format("Запрошен продукт с идентификатором %d", id));
 
 
         Product product = repository.findById(id).orElse(null);
@@ -113,16 +114,28 @@ public class JpaProductService implements ProductService {
 
     @Override
     public int getActiveProductCount() {
-        return 0;
+        return (int) repository.findAll()
+                .stream()
+                .filter(p -> p.isActive())
+                .count();
     }
 
     @Override
     public double getActiveProductsTotalPrice() {
-        return 0;
+        return repository.findAll()
+                .stream()
+                .filter(p -> p.isActive())
+                .mapToDouble(p -> p.getPrice())
+                .sum();
     }
 
     @Override
     public double getActiveProductAveragePrice() {
-        return 0;
+        return repository.findAll()
+                .stream()
+                .filter(p -> p.isActive())
+                .mapToDouble(p -> p.getPrice())
+                .average()
+                .orElse(0);
     }
 }
