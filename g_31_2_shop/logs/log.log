@@ -1,281 +1,461 @@
-2024-02-11T17:22:53.795+01:00  INFO 2584 --- [main] d.aittr.g_31_2_shop.G312ShopApplication  : Starting G312ShopApplication using Java 17.0.9 with PID 2584 (C:\AIT TR\BackEnd\g_31_2_shop\target\classes started by AIT TR Student in C:\AIT TR\BackEnd\g_31_2_shop)
-2024-02-11T17:22:53.817+01:00  INFO 2584 --- [main] d.aittr.g_31_2_shop.G312ShopApplication  : No active profile set, falling back to 1 default profile: "default"
-2024-02-11T17:22:57.120+01:00  INFO 2584 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-02-11T17:22:57.363+01:00  INFO 2584 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 215 ms. Found 2 JPA repository interfaces.
-2024-02-11T17:23:00.381+01:00  INFO 2584 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2024-02-11T17:23:00.405+01:00  INFO 2584 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-02-11T17:23:00.405+01:00  INFO 2584 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.17]
-2024-02-11T17:23:00.805+01:00  INFO 2584 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2024-02-11T17:23:00.809+01:00  INFO 2584 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 6651 ms
-2024-02-11T17:23:01.400+01:00  INFO 2584 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-02-11T17:23:01.625+01:00  INFO 2584 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.1.Final
-2024-02-11T17:23:01.751+01:00  INFO 2584 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2024-02-11T17:23:02.506+01:00  INFO 2584 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-02-11T17:23:02.583+01:00  INFO 2584 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2024-02-11T17:23:03.856+01:00  INFO 2584 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5635bcd2
-2024-02-11T17:23:03.859+01:00  INFO 2584 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2024-02-11T17:23:07.442+01:00  INFO 2584 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-02-11T17:23:07.449+01:00  INFO 2584 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-02-11T17:23:11.103+01:00  INFO 2584 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
-2024-02-11T17:23:11.129+01:00  INFO 2584 --- [main] d.aittr.g_31_2_shop.G312ShopApplication  : Started G312ShopApplication in 18.727 seconds (process running for 21.514)
-2024-02-11T17:23:19.443+01:00  INFO 2584 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-02-11T17:23:19.443+01:00  INFO 2584 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2024-02-11T17:23:19.447+01:00  INFO 2584 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
-2024-02-11T17:23:19.997+01:00  INFO 2584 --- [http-nio-8080-exec-2] d.a.g_31_2_shop.logging.AspectLogging    : Метод getActiveProductById вызван с параметром 5 и успешно вернул результат: ProductDto{id=5, name='Potato', price=70.0}
-2024-02-11T17:23:33.133+01:00  WARN 2584 --- [http-nio-8080-exec-3] d.a.g_31_2_shop.logging.AspectLogging    : Метод getActiveProductById вызван с парметром 50 и выбросил ошибку: Продукт с указанным идентификатором отсутствует в бд
-2024-02-11T17:37:08.908+01:00  INFO 2584 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-02-11T17:37:08.914+01:00  INFO 2584 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2024-02-11T17:37:08.936+01:00  INFO 2584 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2024-02-11T17:46:01.329+01:00  INFO 7460 --- [main] d.aittr.g_31_2_shop.G312ShopApplication  : Starting G312ShopApplication using Java 17.0.9 with PID 7460 (C:\AIT TR\BackEnd\g_31_2_shop\target\classes started by AIT TR Student in C:\AIT TR\BackEnd\g_31_2_shop)
-2024-02-11T17:46:01.337+01:00  INFO 7460 --- [main] d.aittr.g_31_2_shop.G312ShopApplication  : No active profile set, falling back to 1 default profile: "default"
-2024-02-11T17:46:05.413+01:00  INFO 7460 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-02-11T17:46:05.669+01:00  INFO 7460 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 223 ms. Found 2 JPA repository interfaces.
-2024-02-11T17:46:08.827+01:00  INFO 7460 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2024-02-11T17:46:08.880+01:00  INFO 7460 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-02-11T17:46:08.882+01:00  INFO 7460 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.17]
-2024-02-11T17:46:09.221+01:00  INFO 7460 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2024-02-11T17:46:09.224+01:00  INFO 7460 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 7446 ms
-2024-02-11T17:46:09.931+01:00  INFO 7460 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-02-11T17:46:10.212+01:00  INFO 7460 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.1.Final
-2024-02-11T17:46:10.375+01:00  INFO 7460 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2024-02-11T17:46:11.404+01:00  INFO 7460 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-02-11T17:46:11.514+01:00  INFO 7460 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2024-02-11T17:46:12.423+01:00  INFO 7460 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@41582899
-2024-02-11T17:46:12.429+01:00  INFO 7460 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2024-02-11T17:46:15.963+01:00  INFO 7460 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-02-11T17:46:15.970+01:00  INFO 7460 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-02-11T17:46:18.352+01:00  INFO 7460 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
-2024-02-11T17:46:18.380+01:00  INFO 7460 --- [main] d.aittr.g_31_2_shop.G312ShopApplication  : Started G312ShopApplication in 19.027 seconds (process running for 20.177)
-2024-02-11T17:46:19.888+01:00  INFO 7460 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-02-11T17:46:19.888+01:00  INFO 7460 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2024-02-11T17:46:19.894+01:00  INFO 7460 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
-2024-02-11T17:46:48.364+01:00  INFO 7460 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-02-11T17:46:48.368+01:00  INFO 7460 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2024-02-11T17:46:48.398+01:00  INFO 7460 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2024-02-11T18:19:08.756+01:00  INFO 996 --- [main] d.aittr.g_31_2_shop.G312ShopApplication  : Starting G312ShopApplication using Java 17.0.9 with PID 996 (C:\AIT TR\BackEnd\g_31_2_shop\target\classes started by AIT TR Student in C:\AIT TR\BackEnd\g_31_2_shop)
-2024-02-11T18:19:08.772+01:00  INFO 996 --- [main] d.aittr.g_31_2_shop.G312ShopApplication  : No active profile set, falling back to 1 default profile: "default"
-2024-02-11T18:19:11.512+01:00  INFO 996 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-02-11T18:19:11.770+01:00  INFO 996 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 214 ms. Found 2 JPA repository interfaces.
-2024-02-11T18:19:15.491+01:00  INFO 996 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2024-02-11T18:19:15.524+01:00  INFO 996 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-02-11T18:19:15.525+01:00  INFO 996 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.17]
-2024-02-11T18:19:15.769+01:00  INFO 996 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2024-02-11T18:19:15.792+01:00  INFO 996 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 6799 ms
-2024-02-11T18:19:16.576+01:00  INFO 996 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-02-11T18:19:16.735+01:00  INFO 996 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.1.Final
-2024-02-11T18:19:16.893+01:00  INFO 996 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2024-02-11T18:19:17.619+01:00  INFO 996 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-02-11T18:19:17.697+01:00  INFO 996 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2024-02-11T18:19:18.409+01:00  INFO 996 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@32b112a1
-2024-02-11T18:19:18.414+01:00  INFO 996 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2024-02-11T18:19:20.721+01:00  INFO 996 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-02-11T18:19:20.726+01:00  INFO 996 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-02-11T18:19:22.456+01:00  INFO 996 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
-2024-02-11T18:19:22.479+01:00  INFO 996 --- [main] d.aittr.g_31_2_shop.G312ShopApplication  : Started G312ShopApplication in 14.939 seconds (process running for 16.044)
-2024-02-11T18:25:09.291+01:00  INFO 996 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-02-11T18:25:09.294+01:00  INFO 996 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2024-02-11T18:25:09.297+01:00  INFO 996 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
-2024-02-11T18:25:09.389+01:00  INFO 996 --- [http-nio-8080-exec-2] d.a.g_31_2_shop.logging.AspectLogging    : Вызван метод getActiveProductCount
-2024-02-11T18:25:09.806+01:00  INFO 996 --- [http-nio-8080-exec-2] d.a.g_31_2_shop.logging.AspectLogging    : Метод getActiveProductCount отработал за 415 миллисекунд с результатом 7
-2024-02-11T18:25:09.815+01:00 ERROR 996 --- [http-nio-8080-exec-2] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.springframework.aop.AopInvocationException: Null return value from advice does not match primitive return type for: public int de.aittr.g_31_2_shop.services.jpa.JpaProductService.getActiveProductCount()] with root cause
+2024-02-12T00:21:45.772+01:00  INFO 9656 --- [main] d.aittr.g_31_2_shop.G312ShopApplication  : Starting G312ShopApplication using Java 17.0.9 with PID 9656 (C:\AIT TR\BackEnd\g_31_2_shop\target\classes started by AIT TR Student in C:\AIT TR\BackEnd\g_31_2_shop)
+2024-02-12T00:21:45.799+01:00  INFO 9656 --- [main] d.aittr.g_31_2_shop.G312ShopApplication  : No active profile set, falling back to 1 default profile: "default"
+2024-02-12T00:21:49.772+01:00  INFO 9656 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-02-12T00:21:50.167+01:00  INFO 9656 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 354 ms. Found 2 JPA repository interfaces.
+2024-02-12T00:21:53.804+01:00  INFO 9656 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2024-02-12T00:21:53.856+01:00  INFO 9656 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-02-12T00:21:53.857+01:00  INFO 9656 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.15]
+2024-02-12T00:21:54.268+01:00  INFO 9656 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-02-12T00:21:54.270+01:00  INFO 9656 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 8248 ms
+2024-02-12T00:21:55.062+01:00  INFO 9656 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-02-12T00:21:55.350+01:00  INFO 9656 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.13.Final
+2024-02-12T00:21:55.357+01:00  INFO 9656 --- [main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2024-02-12T00:21:56.571+01:00  INFO 9656 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-02-12T00:21:56.680+01:00  INFO 9656 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-02-12T00:21:57.820+01:00  INFO 9656 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7910f355
+2024-02-12T00:21:57.825+01:00  INFO 9656 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-02-12T00:22:01.442+01:00  INFO 9656 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-02-12T00:22:01.455+01:00  INFO 9656 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-02-12T00:22:04.807+01:00  INFO 9656 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2024-02-12T00:22:04.887+01:00  INFO 9656 --- [main] d.aittr.g_31_2_shop.G312ShopApplication  : Started G312ShopApplication in 20.676 seconds (process running for 22.282)
+2024-02-12T00:22:39.892+01:00  INFO 9656 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-02-12T00:22:39.899+01:00  INFO 9656 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-02-12T00:22:39.902+01:00  INFO 9656 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2024-02-12T00:22:40.121+01:00  INFO 9656 --- [http-nio-8080-exec-1] d.a.g_31_2_shop.logging.AspectLogging    : Вызван метод getAllActiveProducts.
+2024-02-12T00:23:35.636+01:00  INFO 9656 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-02-12T00:23:35.641+01:00  INFO 9656 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-02-12T00:23:35.661+01:00  INFO 9656 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-02-12T00:53:41.910+01:00  INFO 14612 --- [main] d.aittr.g_31_2_shop.G312ShopApplication  : Starting G312ShopApplication using Java 17.0.9 with PID 14612 (C:\AIT TR\BackEnd\g_31_2_shop\target\classes started by AIT TR Student in C:\AIT TR\BackEnd\g_31_2_shop)
+2024-02-12T00:53:41.917+01:00  INFO 14612 --- [main] d.aittr.g_31_2_shop.G312ShopApplication  : No active profile set, falling back to 1 default profile: "default"
+2024-02-12T00:53:44.806+01:00  INFO 14612 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-02-12T00:53:45.055+01:00  INFO 14612 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 222 ms. Found 3 JPA repository interfaces.
+2024-02-12T00:53:48.245+01:00  INFO 14612 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2024-02-12T00:53:48.272+01:00  INFO 14612 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-02-12T00:53:48.274+01:00  INFO 14612 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.15]
+2024-02-12T00:53:48.584+01:00  INFO 14612 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-02-12T00:53:48.586+01:00  INFO 14612 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 6403 ms
+2024-02-12T00:53:49.127+01:00  INFO 14612 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-02-12T00:53:49.344+01:00  INFO 14612 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.13.Final
+2024-02-12T00:53:49.357+01:00  INFO 14612 --- [main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2024-02-12T00:53:50.384+01:00  INFO 14612 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-02-12T00:53:50.523+01:00  INFO 14612 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-02-12T00:53:51.682+01:00  INFO 14612 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@27d98bef
+2024-02-12T00:53:51.694+01:00  INFO 14612 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-02-12T00:53:55.047+01:00  INFO 14612 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-02-12T00:53:55.055+01:00  INFO 14612 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-02-12T00:53:57.572+01:00  INFO 14612 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2024-02-12T00:53:57.601+01:00  INFO 14612 --- [main] d.aittr.g_31_2_shop.G312ShopApplication  : Started G312ShopApplication in 17.097 seconds (process running for 18.624)
+2024-02-12T00:53:57.600+01:00  INFO 14612 --- [scheduling-1] d.a.g.services.jpa.TaskService           : Fixed delay task
+2024-02-12T00:54:02.824+01:00  INFO 14612 --- [scheduling-1] d.a.g.services.jpa.TaskService           : Fixed delay task
+2024-02-12T00:54:07.846+01:00  INFO 14612 --- [scheduling-1] d.a.g.services.jpa.TaskService           : Fixed delay task
+2024-02-12T00:54:12.874+01:00  INFO 14612 --- [scheduling-1] d.a.g.services.jpa.TaskService           : Fixed delay task
+2024-02-12T00:54:17.902+01:00  INFO 14612 --- [scheduling-1] d.a.g.services.jpa.TaskService           : Fixed delay task
+2024-02-12T00:54:19.688+01:00  INFO 14612 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-02-12T00:54:19.695+01:00  INFO 14612 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-02-12T00:54:19.726+01:00  INFO 14612 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-02-12T01:00:07.110+01:00  INFO 17248 --- [main] d.aittr.g_31_2_shop.G312ShopApplication  : Starting G312ShopApplication using Java 17.0.9 with PID 17248 (C:\AIT TR\BackEnd\g_31_2_shop\target\classes started by AIT TR Student in C:\AIT TR\BackEnd\g_31_2_shop)
+2024-02-12T01:00:07.117+01:00  INFO 17248 --- [main] d.aittr.g_31_2_shop.G312ShopApplication  : No active profile set, falling back to 1 default profile: "default"
+2024-02-12T01:00:10.861+01:00  INFO 17248 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-02-12T01:00:11.269+01:00  INFO 17248 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 264 ms. Found 3 JPA repository interfaces.
+2024-02-12T01:00:14.064+01:00  INFO 17248 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2024-02-12T01:00:14.102+01:00  INFO 17248 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-02-12T01:00:14.102+01:00  INFO 17248 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.15]
+2024-02-12T01:00:14.427+01:00  INFO 17248 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-02-12T01:00:14.428+01:00  INFO 17248 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 7145 ms
+2024-02-12T01:00:14.981+01:00  INFO 17248 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-02-12T01:00:15.180+01:00  INFO 17248 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.13.Final
+2024-02-12T01:00:15.192+01:00  INFO 17248 --- [main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2024-02-12T01:00:16.156+01:00  INFO 17248 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-02-12T01:00:16.248+01:00  INFO 17248 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-02-12T01:00:17.160+01:00  INFO 17248 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@774f2992
+2024-02-12T01:00:17.166+01:00  INFO 17248 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-02-12T01:00:20.305+01:00  INFO 17248 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-02-12T01:00:20.311+01:00  INFO 17248 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-02-12T01:00:23.099+01:00  INFO 17248 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2024-02-12T01:00:23.178+01:00  INFO 17248 --- [main] d.aittr.g_31_2_shop.G312ShopApplication  : Started G312ShopApplication in 17.683 seconds (process running for 18.983)
+2024-02-12T01:00:23.199+01:00  INFO 17248 --- [scheduling-1] d.a.g.services.jpa.TaskService           : Fixed delay task 3000 ms
+2024-02-12T01:00:31.457+01:00  INFO 17248 --- [scheduling-1] d.a.g.services.jpa.TaskService           : Fixed delay task 3000 ms
+2024-02-12T01:00:39.499+01:00  INFO 17248 --- [scheduling-1] d.a.g.services.jpa.TaskService           : Fixed delay task 3000 ms
+2024-02-12T01:00:47.532+01:00  INFO 17248 --- [scheduling-1] d.a.g.services.jpa.TaskService           : Fixed delay task 3000 ms
+2024-02-12T01:00:55.571+01:00  INFO 17248 --- [scheduling-1] d.a.g.services.jpa.TaskService           : Fixed delay task 3000 ms
+2024-02-12T01:00:56.483+01:00  INFO 17248 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-02-12T01:00:56.493+01:00  INFO 17248 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-02-12T01:00:56.482+01:00 ERROR 17248 --- [scheduling-1] o.s.s.s.TaskUtils$LoggingErrorHandler    : Unexpected error occurred in scheduled task
 
-org.springframework.aop.AopInvocationException: Null return value from advice does not match primitive return type for: public int de.aittr.g_31_2_shop.services.jpa.JpaProductService.getActiveProductCount()
-	at org.springframework.aop.framework.CglibAopProxy.processReturnType(CglibAopProxy.java:421) ~[spring-aop-6.1.2.jar:6.1.2]
-	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:719) ~[spring-aop-6.1.2.jar:6.1.2]
-	at de.aittr.g_31_2_shop.services.jpa.JpaProductService$$SpringCGLIB$$0.getActiveProductCount(<generated>) ~[classes/:na]
-	at de.aittr.g_31_2_shop.controllers.ProductController.getCount(ProductController.java:71) ~[classes/:na]
+java.lang.RuntimeException: java.lang.InterruptedException: sleep interrupted
+	at de.aittr.g_31_2_shop.scheduling.ScheduleExecutor.fixedDelayTask(ScheduleExecutor.java:29) ~[classes/:na]
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
 	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
-	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:262) ~[spring-web-6.1.2.jar:6.1.2]
-	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:190) ~[spring-web-6.1.2.jar:6.1.2]
-	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.1.2.jar:6.1.2]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:917) ~[spring-webmvc-6.1.2.jar:6.1.2]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:829) ~[spring-webmvc-6.1.2.jar:6.1.2]
-	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.1.2.jar:6.1.2]
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089) ~[spring-webmvc-6.1.2.jar:6.1.2]
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.1.2.jar:6.1.2]
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.1.2.jar:6.1.2]
-	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903) ~[spring-webmvc-6.1.2.jar:6.1.2]
-	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564) ~[tomcat-embed-core-10.1.17.jar:6.0]
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.1.2.jar:6.1.2]
-	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.17.jar:6.0]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.17.jar:10.1.17]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.1.2.jar:6.1.2]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.2.jar:6.1.2]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.1.2.jar:6.1.2]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.2.jar:6.1.2]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.1.2.jar:6.1.2]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.2.jar:6.1.2]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:340) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:84) ~[spring-context-6.0.13.jar:6.0.13]
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54) ~[spring-context-6.0.13.jar:6.0.13]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:305) ~[na:na]
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) ~[na:na]
 	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
+Caused by: java.lang.InterruptedException: sleep interrupted
+	at java.base/java.lang.Thread.sleep(Native Method) ~[na:na]
+	at de.aittr.g_31_2_shop.scheduling.ScheduleExecutor.fixedDelayTask(ScheduleExecutor.java:27) ~[classes/:na]
+	... 12 common frames omitted
 
-2024-02-11T18:25:32.481+01:00  INFO 996 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-02-11T18:25:32.486+01:00  INFO 996 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2024-02-11T18:25:32.505+01:00  INFO 996 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2024-02-11T18:26:14.453+01:00  INFO 8920 --- [main] d.aittr.g_31_2_shop.G312ShopApplication  : Starting G312ShopApplication using Java 17.0.9 with PID 8920 (C:\AIT TR\BackEnd\g_31_2_shop\target\classes started by AIT TR Student in C:\AIT TR\BackEnd\g_31_2_shop)
-2024-02-11T18:26:14.463+01:00  INFO 8920 --- [main] d.aittr.g_31_2_shop.G312ShopApplication  : No active profile set, falling back to 1 default profile: "default"
-2024-02-11T18:26:17.302+01:00  INFO 8920 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-02-11T18:26:17.584+01:00  INFO 8920 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 255 ms. Found 2 JPA repository interfaces.
-2024-02-11T18:26:20.128+01:00  INFO 8920 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2024-02-11T18:26:20.156+01:00  INFO 8920 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-02-11T18:26:20.157+01:00  INFO 8920 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.17]
-2024-02-11T18:26:20.365+01:00  INFO 8920 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2024-02-11T18:26:20.366+01:00  INFO 8920 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 5686 ms
-2024-02-11T18:26:20.846+01:00  INFO 8920 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-02-11T18:26:21.022+01:00  INFO 8920 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.1.Final
-2024-02-11T18:26:21.136+01:00  INFO 8920 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2024-02-11T18:26:21.887+01:00  INFO 8920 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-02-11T18:26:21.972+01:00  INFO 8920 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2024-02-11T18:26:22.835+01:00  INFO 8920 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1214d23c
-2024-02-11T18:26:22.840+01:00  INFO 8920 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2024-02-11T18:26:26.087+01:00  INFO 8920 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-02-11T18:26:26.093+01:00  INFO 8920 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-02-11T18:26:28.272+01:00  INFO 8920 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
-2024-02-11T18:26:28.299+01:00  INFO 8920 --- [main] d.aittr.g_31_2_shop.G312ShopApplication  : Started G312ShopApplication in 16.088 seconds (process running for 17.437)
-2024-02-11T18:26:29.637+01:00  INFO 8920 --- [http-nio-8080-exec-3] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-02-11T18:26:29.638+01:00  INFO 8920 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2024-02-11T18:26:29.642+01:00  INFO 8920 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
-2024-02-11T18:26:29.755+01:00  INFO 8920 --- [http-nio-8080-exec-3] d.a.g_31_2_shop.logging.AspectLogging    : Вызван метод getActiveProductCount
-2024-02-11T18:26:30.176+01:00  INFO 8920 --- [http-nio-8080-exec-3] d.a.g_31_2_shop.logging.AspectLogging    : Метод getActiveProductCount отработал за 419 миллисекунд с результатом 7
-2024-02-11T18:26:43.966+01:00  INFO 8920 --- [http-nio-8080-exec-4] d.a.g_31_2_shop.logging.AspectLogging    : Вызван метод getActiveProductCount
-2024-02-11T18:26:43.983+01:00  INFO 8920 --- [http-nio-8080-exec-4] d.a.g_31_2_shop.logging.AspectLogging    : Метод getActiveProductCount отработал за 17 миллисекунд с результатом 7
-2024-02-11T18:26:53.844+01:00  INFO 8920 --- [http-nio-8080-exec-5] d.a.g_31_2_shop.logging.AspectLogging    : Вызван метод getActiveProductCount
-2024-02-11T18:26:53.859+01:00  INFO 8920 --- [http-nio-8080-exec-5] d.a.g_31_2_shop.logging.AspectLogging    : Метод getActiveProductCount отработал за 14 миллисекунд с результатом 7
-2024-02-11T18:31:29.044+01:00  INFO 8920 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-02-11T18:31:29.050+01:00  INFO 8920 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2024-02-11T18:31:29.077+01:00  INFO 8920 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2024-02-11T18:32:28.545+01:00  INFO 14620 --- [main] d.aittr.g_31_2_shop.G312ShopApplication  : Starting G312ShopApplication using Java 17.0.9 with PID 14620 (C:\AIT TR\BackEnd\g_31_2_shop\target\classes started by AIT TR Student in C:\AIT TR\BackEnd\g_31_2_shop)
-2024-02-11T18:32:28.555+01:00  INFO 14620 --- [main] d.aittr.g_31_2_shop.G312ShopApplication  : No active profile set, falling back to 1 default profile: "default"
-2024-02-11T18:32:31.421+01:00  INFO 14620 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-02-11T18:32:31.725+01:00  INFO 14620 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 263 ms. Found 2 JPA repository interfaces.
-2024-02-11T18:32:35.306+01:00  INFO 14620 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2024-02-11T18:32:35.351+01:00  INFO 14620 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-02-11T18:32:35.352+01:00  INFO 14620 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.17]
-2024-02-11T18:32:35.671+01:00  INFO 14620 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2024-02-11T18:32:35.673+01:00  INFO 14620 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 6928 ms
-2024-02-11T18:32:36.245+01:00  INFO 14620 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-02-11T18:32:36.509+01:00  INFO 14620 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.1.Final
-2024-02-11T18:32:36.687+01:00  INFO 14620 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2024-02-11T18:32:37.667+01:00  INFO 14620 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-02-11T18:32:37.799+01:00  INFO 14620 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2024-02-11T18:32:38.981+01:00  INFO 14620 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@44eb2452
-2024-02-11T18:32:38.989+01:00  INFO 14620 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2024-02-11T18:32:44.627+01:00  INFO 14620 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-02-11T18:32:44.634+01:00  INFO 14620 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-02-11T18:32:48.275+01:00  INFO 14620 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
-2024-02-11T18:32:48.298+01:00  INFO 14620 --- [main] d.aittr.g_31_2_shop.G312ShopApplication  : Started G312ShopApplication in 21.942 seconds (process running for 24.608)
-2024-02-11T18:32:50.414+01:00  INFO 14620 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-02-11T18:32:50.415+01:00  INFO 14620 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2024-02-11T18:32:50.417+01:00  INFO 14620 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
-2024-02-11T18:33:16.812+01:00  INFO 14620 --- [http-nio-8080-exec-1] d.a.g_31_2_shop.logging.AspectLogging    : Вызван метод getActiveProductCount
-2024-02-11T18:34:47.062+01:00  INFO 14620 --- [http-nio-8080-exec-1] d.a.g_31_2_shop.logging.AspectLogging    : Метод getActiveProductCount отработал за 65868 миллисекунд с результатом 7
-2024-02-11T18:34:52.891+01:00  INFO 14620 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-02-11T18:34:52.898+01:00  INFO 14620 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2024-02-11T18:34:52.947+01:00  INFO 14620 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2024-02-11T18:36:37.021+01:00  INFO 15308 --- [main] d.aittr.g_31_2_shop.G312ShopApplication  : Starting G312ShopApplication using Java 17.0.9 with PID 15308 (C:\AIT TR\BackEnd\g_31_2_shop\target\classes started by AIT TR Student in C:\AIT TR\BackEnd\g_31_2_shop)
-2024-02-11T18:36:37.028+01:00  INFO 15308 --- [main] d.aittr.g_31_2_shop.G312ShopApplication  : No active profile set, falling back to 1 default profile: "default"
-2024-02-11T18:36:40.452+01:00  INFO 15308 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-02-11T18:36:40.657+01:00  INFO 15308 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 179 ms. Found 2 JPA repository interfaces.
-2024-02-11T18:36:43.364+01:00  INFO 15308 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2024-02-11T18:36:43.396+01:00  INFO 15308 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-02-11T18:36:43.396+01:00  INFO 15308 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.17]
-2024-02-11T18:36:43.606+01:00  INFO 15308 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2024-02-11T18:36:43.608+01:00  INFO 15308 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 6401 ms
-2024-02-11T18:36:44.110+01:00  INFO 15308 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-02-11T18:36:44.259+01:00  INFO 15308 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.1.Final
-2024-02-11T18:36:44.365+01:00  INFO 15308 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2024-02-11T18:36:45.071+01:00  INFO 15308 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-02-11T18:36:45.219+01:00  INFO 15308 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2024-02-11T18:36:46.102+01:00  INFO 15308 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@577f9dfd
-2024-02-11T18:36:46.109+01:00  INFO 15308 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2024-02-11T18:36:49.864+01:00  INFO 15308 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-02-11T18:36:49.874+01:00  INFO 15308 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-02-11T18:36:52.583+01:00  INFO 15308 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
-2024-02-11T18:36:52.652+01:00  INFO 15308 --- [main] d.aittr.g_31_2_shop.G312ShopApplication  : Started G312ShopApplication in 17.324 seconds (process running for 19.375)
-2024-02-11T18:36:54.801+01:00  INFO 15308 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-02-11T18:36:54.802+01:00  INFO 15308 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2024-02-11T18:36:54.806+01:00  INFO 15308 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
-2024-02-11T18:36:54.920+01:00  INFO 15308 --- [http-nio-8080-exec-1] d.a.g_31_2_shop.logging.AspectLogging    : Вызван метод getActiveProductCount
-2024-02-11T18:36:55.567+01:00  INFO 15308 --- [http-nio-8080-exec-1] d.a.g_31_2_shop.logging.AspectLogging    : Метод getActiveProductCount отработал за 645 миллисекунд с результатом 7
-2024-02-11T18:36:55.569+01:00  INFO 15308 --- [http-nio-8080-exec-1] d.a.g_31_2_shop.logging.AspectLogging    : Подменяем действительный результат на свое значение - 500
-2024-02-11T18:38:26.005+01:00  INFO 15308 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-02-11T18:38:26.011+01:00  INFO 15308 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2024-02-11T18:38:26.030+01:00  INFO 15308 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2024-02-11T18:59:41.102+01:00  INFO 7092 --- [main] d.aittr.g_31_2_shop.G312ShopApplication  : Starting G312ShopApplication using Java 17.0.9 with PID 7092 (C:\AIT TR\BackEnd\g_31_2_shop\target\classes started by AIT TR Student in C:\AIT TR\BackEnd\g_31_2_shop)
-2024-02-11T18:59:41.109+01:00  INFO 7092 --- [main] d.aittr.g_31_2_shop.G312ShopApplication  : No active profile set, falling back to 1 default profile: "default"
-2024-02-11T18:59:44.166+01:00  INFO 7092 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-02-11T18:59:44.387+01:00  INFO 7092 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 196 ms. Found 2 JPA repository interfaces.
-2024-02-11T18:59:47.023+01:00  INFO 7092 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2024-02-11T18:59:47.057+01:00  INFO 7092 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-02-11T18:59:47.058+01:00  INFO 7092 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.17]
-2024-02-11T18:59:47.295+01:00  INFO 7092 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2024-02-11T18:59:47.296+01:00  INFO 7092 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 6023 ms
-2024-02-11T18:59:47.881+01:00  INFO 7092 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-02-11T18:59:48.061+01:00  INFO 7092 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.1.Final
-2024-02-11T18:59:48.168+01:00  INFO 7092 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2024-02-11T18:59:48.894+01:00  INFO 7092 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-02-11T18:59:48.979+01:00  INFO 7092 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2024-02-11T18:59:49.951+01:00  INFO 7092 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@144a5e6e
-2024-02-11T18:59:49.959+01:00  INFO 7092 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2024-02-11T18:59:52.878+01:00  INFO 7092 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-02-11T18:59:52.882+01:00  INFO 7092 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-02-11T18:59:55.317+01:00  INFO 7092 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
-2024-02-11T18:59:55.344+01:00  INFO 7092 --- [main] d.aittr.g_31_2_shop.G312ShopApplication  : Started G312ShopApplication in 15.973 seconds (process running for 17.346)
-2024-02-11T18:59:58.773+01:00  INFO 7092 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-02-11T18:59:58.776+01:00  INFO 7092 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2024-02-11T18:59:58.781+01:00  INFO 7092 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
-2024-02-11T19:00:59.098+01:00  INFO 7092 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-02-11T19:00:59.109+01:00  INFO 7092 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2024-02-11T19:00:59.131+01:00  INFO 7092 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2024-02-11T19:53:59.264+01:00  INFO 9360 --- [main] d.aittr.g_31_2_shop.G312ShopApplication  : Starting G312ShopApplication using Java 17.0.9 with PID 9360 (C:\AIT TR\BackEnd\g_31_2_shop\target\classes started by AIT TR Student in C:\AIT TR\BackEnd\g_31_2_shop)
-2024-02-11T19:53:59.269+01:00  INFO 9360 --- [main] d.aittr.g_31_2_shop.G312ShopApplication  : No active profile set, falling back to 1 default profile: "default"
-2024-02-11T19:54:02.403+01:00  INFO 9360 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-02-11T19:54:02.729+01:00  INFO 9360 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 296 ms. Found 2 JPA repository interfaces.
-2024-02-11T19:54:05.781+01:00  INFO 9360 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2024-02-11T19:54:05.815+01:00  INFO 9360 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-02-11T19:54:05.816+01:00  INFO 9360 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.17]
-2024-02-11T19:54:06.028+01:00  INFO 9360 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2024-02-11T19:54:06.029+01:00  INFO 9360 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 6502 ms
-2024-02-11T19:54:06.613+01:00  INFO 9360 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-02-11T19:54:06.939+01:00  INFO 9360 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.1.Final
-2024-02-11T19:54:07.129+01:00  INFO 9360 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2024-02-11T19:54:08.346+01:00  INFO 9360 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-02-11T19:54:08.442+01:00  INFO 9360 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2024-02-11T19:54:09.459+01:00  INFO 9360 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@191f4d65
-2024-02-11T19:54:09.465+01:00  INFO 9360 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2024-02-11T19:54:12.579+01:00  INFO 9360 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-02-11T19:54:12.584+01:00  INFO 9360 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-02-11T19:54:15.373+01:00  INFO 9360 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
-2024-02-11T19:54:15.397+01:00  INFO 9360 --- [main] d.aittr.g_31_2_shop.G312ShopApplication  : Started G312ShopApplication in 17.479 seconds (process running for 21.016)
-2024-02-11T19:54:43.477+01:00  INFO 9360 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-02-11T19:54:43.477+01:00  INFO 9360 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2024-02-11T19:54:43.481+01:00  INFO 9360 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
-2024-02-11T19:56:22.880+01:00  INFO 9360 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-02-11T19:56:22.885+01:00  INFO 9360 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2024-02-11T19:56:22.900+01:00  INFO 9360 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-02-12T01:00:56.535+01:00  INFO 17248 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-02-12T01:02:09.142+01:00  INFO 14096 --- [main] d.aittr.g_31_2_shop.G312ShopApplication  : Starting G312ShopApplication using Java 17.0.9 with PID 14096 (C:\AIT TR\BackEnd\g_31_2_shop\target\classes started by AIT TR Student in C:\AIT TR\BackEnd\g_31_2_shop)
+2024-02-12T01:02:09.152+01:00  INFO 14096 --- [main] d.aittr.g_31_2_shop.G312ShopApplication  : No active profile set, falling back to 1 default profile: "default"
+2024-02-12T01:02:12.232+01:00  INFO 14096 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-02-12T01:02:12.646+01:00  INFO 14096 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 382 ms. Found 3 JPA repository interfaces.
+2024-02-12T01:02:15.577+01:00  INFO 14096 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2024-02-12T01:02:15.604+01:00  INFO 14096 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-02-12T01:02:15.605+01:00  INFO 14096 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.15]
+2024-02-12T01:02:15.875+01:00  INFO 14096 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-02-12T01:02:15.876+01:00  INFO 14096 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 6470 ms
+2024-02-12T01:02:17.269+01:00  INFO 14096 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-02-12T01:02:17.510+01:00  INFO 14096 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.13.Final
+2024-02-12T01:02:17.518+01:00  INFO 14096 --- [main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2024-02-12T01:02:18.623+01:00  INFO 14096 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-02-12T01:02:18.715+01:00  INFO 14096 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-02-12T01:02:19.786+01:00  INFO 14096 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@671d97bc
+2024-02-12T01:02:19.793+01:00  INFO 14096 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-02-12T01:02:22.867+01:00  INFO 14096 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-02-12T01:02:22.875+01:00  INFO 14096 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-02-12T01:02:25.537+01:00  INFO 14096 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2024-02-12T01:02:25.571+01:00  INFO 14096 --- [main] d.aittr.g_31_2_shop.G312ShopApplication  : Started G312ShopApplication in 17.901 seconds (process running for 19.764)
+2024-02-12T01:02:25.576+01:00  INFO 14096 --- [scheduling-1] d.a.g.services.jpa.TaskService           : Fixed delay task 7000 ms
+2024-02-12T01:02:37.772+01:00  INFO 14096 --- [scheduling-1] d.a.g.services.jpa.TaskService           : Fixed delay task 7000 ms
+2024-02-12T01:02:49.815+01:00  INFO 14096 --- [scheduling-1] d.a.g.services.jpa.TaskService           : Fixed delay task 7000 ms
+2024-02-12T01:02:51.588+01:00  INFO 14096 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-02-12T01:02:51.589+01:00 ERROR 14096 --- [scheduling-1] o.s.s.s.TaskUtils$LoggingErrorHandler    : Unexpected error occurred in scheduled task
+
+java.lang.RuntimeException: java.lang.InterruptedException: sleep interrupted
+	at de.aittr.g_31_2_shop.scheduling.ScheduleExecutor.fixedDelayTask(ScheduleExecutor.java:39) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:84) ~[spring-context-6.0.13.jar:6.0.13]
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54) ~[spring-context-6.0.13.jar:6.0.13]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:305) ~[na:na]
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
+Caused by: java.lang.InterruptedException: sleep interrupted
+	at java.base/java.lang.Thread.sleep(Native Method) ~[na:na]
+	at de.aittr.g_31_2_shop.scheduling.ScheduleExecutor.fixedDelayTask(ScheduleExecutor.java:37) ~[classes/:na]
+	... 12 common frames omitted
+
+2024-02-12T01:02:51.632+01:00  INFO 14096 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-02-12T01:02:51.702+01:00  INFO 14096 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-02-12T01:04:58.414+01:00  INFO 16300 --- [main] d.aittr.g_31_2_shop.G312ShopApplication  : Starting G312ShopApplication using Java 17.0.9 with PID 16300 (C:\AIT TR\BackEnd\g_31_2_shop\target\classes started by AIT TR Student in C:\AIT TR\BackEnd\g_31_2_shop)
+2024-02-12T01:04:58.423+01:00  INFO 16300 --- [main] d.aittr.g_31_2_shop.G312ShopApplication  : No active profile set, falling back to 1 default profile: "default"
+2024-02-12T01:05:01.852+01:00  INFO 16300 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-02-12T01:05:02.138+01:00  INFO 16300 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 247 ms. Found 3 JPA repository interfaces.
+2024-02-12T01:05:04.673+01:00  INFO 16300 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2024-02-12T01:05:04.699+01:00  INFO 16300 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-02-12T01:05:04.713+01:00  INFO 16300 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.15]
+2024-02-12T01:05:04.988+01:00  INFO 16300 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-02-12T01:05:04.989+01:00  INFO 16300 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 6407 ms
+2024-02-12T01:05:05.559+01:00  INFO 16300 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-02-12T01:05:05.760+01:00  INFO 16300 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.13.Final
+2024-02-12T01:05:05.770+01:00  INFO 16300 --- [main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2024-02-12T01:05:06.691+01:00  INFO 16300 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-02-12T01:05:06.777+01:00  INFO 16300 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-02-12T01:05:07.668+01:00  INFO 16300 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@754de353
+2024-02-12T01:05:07.677+01:00  INFO 16300 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-02-12T01:05:10.479+01:00  INFO 16300 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-02-12T01:05:10.487+01:00  INFO 16300 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-02-12T01:05:13.121+01:00  INFO 16300 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2024-02-12T01:05:13.156+01:00  INFO 16300 --- [main] d.aittr.g_31_2_shop.G312ShopApplication  : Started G312ShopApplication in 16.561 seconds (process running for 18.21)
+2024-02-12T01:05:13.157+01:00  INFO 16300 --- [scheduling-1] d.a.g.services.jpa.TaskService           : Fixed rate task 3000 ms
+2024-02-12T01:05:18.163+01:00  INFO 16300 --- [scheduling-1] d.a.g.services.jpa.TaskService           : Fixed rate task 3000 ms
+2024-02-12T01:05:23.158+01:00  INFO 16300 --- [scheduling-1] d.a.g.services.jpa.TaskService           : Fixed rate task 3000 ms
+2024-02-12T01:05:28.163+01:00  INFO 16300 --- [scheduling-1] d.a.g.services.jpa.TaskService           : Fixed rate task 3000 ms
+2024-02-12T01:05:33.163+01:00  INFO 16300 --- [scheduling-1] d.a.g.services.jpa.TaskService           : Fixed rate task 3000 ms
+2024-02-12T01:05:34.406+01:00  INFO 16300 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-02-12T01:05:34.414+01:00  INFO 16300 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-02-12T01:05:34.402+01:00 ERROR 16300 --- [scheduling-1] o.s.s.s.TaskUtils$LoggingErrorHandler    : Unexpected error occurred in scheduled task
+
+java.lang.RuntimeException: java.lang.InterruptedException: sleep interrupted
+	at de.aittr.g_31_2_shop.scheduling.ScheduleExecutor.fixedRateTask(ScheduleExecutor.java:49) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:84) ~[spring-context-6.0.13.jar:6.0.13]
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54) ~[spring-context-6.0.13.jar:6.0.13]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:305) ~[na:na]
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
+Caused by: java.lang.InterruptedException: sleep interrupted
+	at java.base/java.lang.Thread.sleep(Native Method) ~[na:na]
+	at de.aittr.g_31_2_shop.scheduling.ScheduleExecutor.fixedRateTask(ScheduleExecutor.java:47) ~[classes/:na]
+	... 12 common frames omitted
+
+2024-02-12T01:05:34.473+01:00  INFO 16300 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-02-12T01:07:00.743+01:00  INFO 2080 --- [main] d.aittr.g_31_2_shop.G312ShopApplication  : Starting G312ShopApplication using Java 17.0.9 with PID 2080 (C:\AIT TR\BackEnd\g_31_2_shop\target\classes started by AIT TR Student in C:\AIT TR\BackEnd\g_31_2_shop)
+2024-02-12T01:07:00.752+01:00  INFO 2080 --- [main] d.aittr.g_31_2_shop.G312ShopApplication  : No active profile set, falling back to 1 default profile: "default"
+2024-02-12T01:07:03.900+01:00  INFO 2080 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-02-12T01:07:04.165+01:00  INFO 2080 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 237 ms. Found 3 JPA repository interfaces.
+2024-02-12T01:07:06.699+01:00  INFO 2080 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2024-02-12T01:07:06.724+01:00  INFO 2080 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-02-12T01:07:06.726+01:00  INFO 2080 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.15]
+2024-02-12T01:07:07.110+01:00  INFO 2080 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-02-12T01:07:07.113+01:00  INFO 2080 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 6164 ms
+2024-02-12T01:07:07.905+01:00  INFO 2080 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-02-12T01:07:08.192+01:00  INFO 2080 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.13.Final
+2024-02-12T01:07:08.197+01:00  INFO 2080 --- [main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2024-02-12T01:07:09.196+01:00  INFO 2080 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-02-12T01:07:09.294+01:00  INFO 2080 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-02-12T01:07:10.329+01:00  INFO 2080 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@77cddc0c
+2024-02-12T01:07:10.336+01:00  INFO 2080 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-02-12T01:07:13.353+01:00  INFO 2080 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-02-12T01:07:13.360+01:00  INFO 2080 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-02-12T01:07:16.073+01:00  INFO 2080 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2024-02-12T01:07:16.101+01:00  INFO 2080 --- [main] d.aittr.g_31_2_shop.G312ShopApplication  : Started G312ShopApplication in 16.669 seconds (process running for 18.162)
+2024-02-12T01:07:16.107+01:00  INFO 2080 --- [scheduling-1] d.a.g.services.jpa.TaskService           : Fixed rate task 7000 ms
+2024-02-12T01:07:23.301+01:00  INFO 2080 --- [scheduling-1] d.a.g.services.jpa.TaskService           : Fixed rate task 7000 ms
+2024-02-12T01:07:30.333+01:00  INFO 2080 --- [scheduling-1] d.a.g.services.jpa.TaskService           : Fixed rate task 7000 ms
+2024-02-12T01:07:37.359+01:00  INFO 2080 --- [scheduling-1] d.a.g.services.jpa.TaskService           : Fixed rate task 7000 ms
+2024-02-12T01:07:44.385+01:00  INFO 2080 --- [scheduling-1] d.a.g.services.jpa.TaskService           : Fixed rate task 7000 ms
+2024-02-12T01:07:45.675+01:00  INFO 2080 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-02-12T01:07:45.679+01:00  INFO 2080 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-02-12T01:07:45.672+01:00 ERROR 2080 --- [scheduling-1] o.s.s.s.TaskUtils$LoggingErrorHandler    : Unexpected error occurred in scheduled task
+
+java.lang.RuntimeException: java.lang.InterruptedException: sleep interrupted
+	at de.aittr.g_31_2_shop.scheduling.ScheduleExecutor.fixedRateTask(ScheduleExecutor.java:59) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:84) ~[spring-context-6.0.13.jar:6.0.13]
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54) ~[spring-context-6.0.13.jar:6.0.13]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:305) ~[na:na]
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
+Caused by: java.lang.InterruptedException: sleep interrupted
+	at java.base/java.lang.Thread.sleep(Native Method) ~[na:na]
+	at de.aittr.g_31_2_shop.scheduling.ScheduleExecutor.fixedRateTask(ScheduleExecutor.java:57) ~[classes/:na]
+	... 12 common frames omitted
+
+2024-02-12T01:07:45.700+01:00  INFO 2080 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-02-12T01:09:55.990+01:00  INFO 9404 --- [main] d.aittr.g_31_2_shop.G312ShopApplication  : Starting G312ShopApplication using Java 17.0.9 with PID 9404 (C:\AIT TR\BackEnd\g_31_2_shop\target\classes started by AIT TR Student in C:\AIT TR\BackEnd\g_31_2_shop)
+2024-02-12T01:09:56.001+01:00  INFO 9404 --- [main] d.aittr.g_31_2_shop.G312ShopApplication  : No active profile set, falling back to 1 default profile: "default"
+2024-02-12T01:09:59.442+01:00  INFO 9404 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-02-12T01:09:59.878+01:00  INFO 9404 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 383 ms. Found 3 JPA repository interfaces.
+2024-02-12T01:10:03.519+01:00  INFO 9404 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2024-02-12T01:10:03.553+01:00  INFO 9404 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-02-12T01:10:03.553+01:00  INFO 9404 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.15]
+2024-02-12T01:10:03.865+01:00  INFO 9404 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-02-12T01:10:03.866+01:00  INFO 9404 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 7570 ms
+2024-02-12T01:10:04.400+01:00  INFO 9404 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-02-12T01:10:04.603+01:00  INFO 9404 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.13.Final
+2024-02-12T01:10:04.611+01:00  INFO 9404 --- [main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2024-02-12T01:10:05.949+01:00  INFO 9404 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-02-12T01:10:06.248+01:00  INFO 9404 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-02-12T01:10:07.436+01:00  INFO 9404 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@192b472d
+2024-02-12T01:10:07.446+01:00  INFO 9404 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-02-12T01:10:10.630+01:00  INFO 9404 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-02-12T01:10:10.638+01:00  INFO 9404 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-02-12T01:10:13.085+01:00  INFO 9404 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2024-02-12T01:10:13.113+01:00  INFO 9404 --- [main] d.aittr.g_31_2_shop.G312ShopApplication  : Started G312ShopApplication in 19.28 seconds (process running for 20.544)
+2024-02-12T01:10:13.132+01:00  INFO 9404 --- [task-1] d.a.g.services.jpa.TaskService           : Fixed rate async task 7000 ms
+2024-02-12T01:10:18.118+01:00  INFO 9404 --- [task-2] d.a.g.services.jpa.TaskService           : Fixed rate async task 7000 ms
+2024-02-12T01:10:23.117+01:00  INFO 9404 --- [task-3] d.a.g.services.jpa.TaskService           : Fixed rate async task 7000 ms
+2024-02-12T01:10:28.146+01:00  INFO 9404 --- [task-4] d.a.g.services.jpa.TaskService           : Fixed rate async task 7000 ms
+2024-02-12T01:10:33.116+01:00  INFO 9404 --- [task-5] d.a.g.services.jpa.TaskService           : Fixed rate async task 7000 ms
+2024-02-12T01:10:34.271+01:00  INFO 9404 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-02-12T01:10:34.278+01:00  INFO 9404 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-02-12T01:10:34.276+01:00 ERROR 9404 --- [task-5] .a.i.SimpleAsyncUncaughtExceptionHandler : Unexpected exception occurred invoking async method: public void de.aittr.g_31_2_shop.scheduling.ScheduleExecutor.fixedRateAsyncTask()
+
+java.lang.RuntimeException: java.lang.InterruptedException: sleep interrupted
+	at de.aittr.g_31_2_shop.scheduling.ScheduleExecutor.fixedRateAsyncTask(ScheduleExecutor.java:73) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:343) ~[spring-aop-6.0.13.jar:6.0.13]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196) ~[spring-aop-6.0.13.jar:6.0.13]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-6.0.13.jar:6.0.13]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:751) ~[spring-aop-6.0.13.jar:6.0.13]
+	at org.springframework.aop.interceptor.AsyncExecutionInterceptor.lambda$invoke$0(AsyncExecutionInterceptor.java:115) ~[spring-aop-6.0.13.jar:6.0.13]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
+Caused by: java.lang.InterruptedException: sleep interrupted
+	at java.base/java.lang.Thread.sleep(Native Method) ~[na:na]
+	at de.aittr.g_31_2_shop.scheduling.ScheduleExecutor.fixedRateAsyncTask(ScheduleExecutor.java:71) ~[classes/:na]
+	... 13 common frames omitted
+
+2024-02-12T01:10:34.276+01:00 ERROR 9404 --- [task-4] .a.i.SimpleAsyncUncaughtExceptionHandler : Unexpected exception occurred invoking async method: public void de.aittr.g_31_2_shop.scheduling.ScheduleExecutor.fixedRateAsyncTask()
+
+java.lang.RuntimeException: java.lang.InterruptedException: sleep interrupted
+	at de.aittr.g_31_2_shop.scheduling.ScheduleExecutor.fixedRateAsyncTask(ScheduleExecutor.java:73) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:343) ~[spring-aop-6.0.13.jar:6.0.13]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196) ~[spring-aop-6.0.13.jar:6.0.13]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-6.0.13.jar:6.0.13]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:751) ~[spring-aop-6.0.13.jar:6.0.13]
+	at org.springframework.aop.interceptor.AsyncExecutionInterceptor.lambda$invoke$0(AsyncExecutionInterceptor.java:115) ~[spring-aop-6.0.13.jar:6.0.13]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
+Caused by: java.lang.InterruptedException: sleep interrupted
+	at java.base/java.lang.Thread.sleep(Native Method) ~[na:na]
+	at de.aittr.g_31_2_shop.scheduling.ScheduleExecutor.fixedRateAsyncTask(ScheduleExecutor.java:71) ~[classes/:na]
+	... 13 common frames omitted
+
+2024-02-12T01:10:34.339+01:00  INFO 9404 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-02-12T01:17:17.387+01:00  INFO 3272 --- [main] d.aittr.g_31_2_shop.G312ShopApplication  : Starting G312ShopApplication using Java 17.0.9 with PID 3272 (C:\AIT TR\BackEnd\g_31_2_shop\target\classes started by AIT TR Student in C:\AIT TR\BackEnd\g_31_2_shop)
+2024-02-12T01:17:17.398+01:00  INFO 3272 --- [main] d.aittr.g_31_2_shop.G312ShopApplication  : No active profile set, falling back to 1 default profile: "default"
+2024-02-12T01:17:20.586+01:00  INFO 3272 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-02-12T01:17:20.882+01:00  INFO 3272 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 256 ms. Found 3 JPA repository interfaces.
+2024-02-12T01:17:23.745+01:00  INFO 3272 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2024-02-12T01:17:23.830+01:00  INFO 3272 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-02-12T01:17:23.831+01:00  INFO 3272 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.15]
+2024-02-12T01:17:24.367+01:00  INFO 3272 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-02-12T01:17:24.369+01:00  INFO 3272 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 6787 ms
+2024-02-12T01:17:25.201+01:00  INFO 3272 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-02-12T01:17:25.437+01:00  INFO 3272 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.13.Final
+2024-02-12T01:17:25.453+01:00  INFO 3272 --- [main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2024-02-12T01:17:26.830+01:00  INFO 3272 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-02-12T01:17:27.005+01:00  INFO 3272 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-02-12T01:17:27.825+01:00  INFO 3272 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5d92e8e2
+2024-02-12T01:17:27.830+01:00  INFO 3272 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-02-12T01:17:30.693+01:00  INFO 3272 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-02-12T01:17:30.698+01:00  INFO 3272 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-02-12T01:17:33.152+01:00  INFO 3272 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2024-02-12T01:17:33.185+01:00  INFO 3272 --- [main] d.aittr.g_31_2_shop.G312ShopApplication  : Started G312ShopApplication in 17.783 seconds (process running for 19.296)
+2024-02-12T01:17:53.196+01:00  INFO 3272 --- [scheduling-1] d.a.g.services.jpa.TaskService           : initial delay task
+2024-02-12T01:17:58.435+01:00  INFO 3272 --- [scheduling-1] d.a.g.services.jpa.TaskService           : initial delay task
+2024-02-12T01:18:03.468+01:00  INFO 3272 --- [scheduling-1] d.a.g.services.jpa.TaskService           : initial delay task
+2024-02-12T01:18:08.498+01:00  INFO 3272 --- [scheduling-1] d.a.g.services.jpa.TaskService           : initial delay task
+2024-02-12T01:18:10.601+01:00  INFO 3272 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-02-12T01:18:10.606+01:00  INFO 3272 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-02-12T01:18:10.627+01:00  INFO 3272 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-02-12T01:21:14.904+01:00  INFO 7620 --- [main] d.aittr.g_31_2_shop.G312ShopApplication  : Starting G312ShopApplication using Java 17.0.9 with PID 7620 (C:\AIT TR\BackEnd\g_31_2_shop\target\classes started by AIT TR Student in C:\AIT TR\BackEnd\g_31_2_shop)
+2024-02-12T01:21:14.915+01:00  INFO 7620 --- [main] d.aittr.g_31_2_shop.G312ShopApplication  : No active profile set, falling back to 1 default profile: "default"
+2024-02-12T01:21:18.284+01:00  INFO 7620 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-02-12T01:21:18.663+01:00  INFO 7620 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 343 ms. Found 3 JPA repository interfaces.
+2024-02-12T01:21:22.486+01:00  INFO 7620 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2024-02-12T01:21:22.514+01:00  INFO 7620 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-02-12T01:21:22.516+01:00  INFO 7620 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.15]
+2024-02-12T01:21:22.932+01:00  INFO 7620 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-02-12T01:21:22.933+01:00  INFO 7620 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 7620 ms
+2024-02-12T01:21:23.904+01:00  INFO 7620 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-02-12T01:21:24.360+01:00  INFO 7620 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.13.Final
+2024-02-12T01:21:24.373+01:00  INFO 7620 --- [main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2024-02-12T01:21:25.471+01:00  INFO 7620 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-02-12T01:21:25.566+01:00  INFO 7620 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-02-12T01:21:26.573+01:00  INFO 7620 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@542c65d9
+2024-02-12T01:21:26.579+01:00  INFO 7620 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-02-12T01:21:30.326+01:00  INFO 7620 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-02-12T01:21:30.342+01:00  INFO 7620 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-02-12T01:21:33.355+01:00  INFO 7620 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2024-02-12T01:21:33.393+01:00  INFO 7620 --- [scheduling-1] d.a.g.services.jpa.TaskService           : another delay format task
+2024-02-12T01:21:33.402+01:00  INFO 7620 --- [main] d.aittr.g_31_2_shop.G312ShopApplication  : Started G312ShopApplication in 20.508 seconds (process running for 22.028)
+2024-02-12T01:21:36.676+01:00  INFO 7620 --- [scheduling-1] d.a.g.services.jpa.TaskService           : another delay format task
+2024-02-12T01:21:39.706+01:00  INFO 7620 --- [scheduling-1] d.a.g.services.jpa.TaskService           : another delay format task
+2024-02-12T01:21:42.741+01:00  INFO 7620 --- [scheduling-1] d.a.g.services.jpa.TaskService           : another delay format task
+2024-02-12T01:21:45.764+01:00  INFO 7620 --- [scheduling-1] d.a.g.services.jpa.TaskService           : another delay format task
+2024-02-12T01:21:48.792+01:00  INFO 7620 --- [scheduling-1] d.a.g.services.jpa.TaskService           : another delay format task
+2024-02-12T01:21:49.839+01:00  INFO 7620 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-02-12T01:21:49.843+01:00  INFO 7620 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-02-12T01:21:49.865+01:00  INFO 7620 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-02-12T01:32:25.354+01:00  INFO 6468 --- [main] d.aittr.g_31_2_shop.G312ShopApplication  : Starting G312ShopApplication using Java 17.0.9 with PID 6468 (C:\AIT TR\BackEnd\g_31_2_shop\target\classes started by AIT TR Student in C:\AIT TR\BackEnd\g_31_2_shop)
+2024-02-12T01:32:25.361+01:00  INFO 6468 --- [main] d.aittr.g_31_2_shop.G312ShopApplication  : No active profile set, falling back to 1 default profile: "default"
+2024-02-12T01:32:27.771+01:00  INFO 6468 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-02-12T01:32:28.007+01:00  INFO 6468 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 207 ms. Found 3 JPA repository interfaces.
+2024-02-12T01:32:30.661+01:00  INFO 6468 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2024-02-12T01:32:30.683+01:00  INFO 6468 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-02-12T01:32:30.684+01:00  INFO 6468 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.15]
+2024-02-12T01:32:31.001+01:00  INFO 6468 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-02-12T01:32:31.003+01:00  INFO 6468 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 5473 ms
+2024-02-12T01:32:31.547+01:00  INFO 6468 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-02-12T01:32:31.760+01:00  INFO 6468 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.13.Final
+2024-02-12T01:32:31.767+01:00  INFO 6468 --- [main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2024-02-12T01:32:32.708+01:00  INFO 6468 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-02-12T01:32:32.802+01:00  INFO 6468 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-02-12T01:32:33.485+01:00  INFO 6468 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4492b393
+2024-02-12T01:32:33.491+01:00  INFO 6468 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-02-12T01:32:37.822+01:00  INFO 6468 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-02-12T01:32:37.829+01:00  INFO 6468 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-02-12T01:32:41.856+01:00  INFO 6468 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2024-02-12T01:32:41.890+01:00  INFO 6468 --- [main] d.aittr.g_31_2_shop.G312ShopApplication  : Started G312ShopApplication in 17.711 seconds (process running for 18.792)
+2024-02-12T01:33:10.013+01:00  INFO 6468 --- [scheduling-1] d.a.g.services.jpa.TaskService           : Cron expression task
+2024-02-12T01:33:30.006+01:00  INFO 6468 --- [scheduling-1] d.a.g.services.jpa.TaskService           : Cron expression task
+2024-02-12T01:33:39.870+01:00  INFO 6468 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-02-12T01:33:39.875+01:00  INFO 6468 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-02-12T01:33:39.894+01:00  INFO 6468 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-02-12T02:04:53.918+01:00  INFO 11372 --- [main] d.aittr.g_31_2_shop.G312ShopApplication  : Starting G312ShopApplication using Java 17.0.9 with PID 11372 (C:\AIT TR\BackEnd\g_31_2_shop\target\classes started by AIT TR Student in C:\AIT TR\BackEnd\g_31_2_shop)
+2024-02-12T02:04:53.927+01:00  INFO 11372 --- [main] d.aittr.g_31_2_shop.G312ShopApplication  : No active profile set, falling back to 1 default profile: "default"
+2024-02-12T02:04:57.684+01:00  INFO 11372 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-02-12T02:04:58.079+01:00  INFO 11372 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 359 ms. Found 3 JPA repository interfaces.
+2024-02-12T02:05:01.157+01:00  INFO 11372 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2024-02-12T02:05:01.192+01:00  INFO 11372 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-02-12T02:05:01.194+01:00  INFO 11372 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.15]
+2024-02-12T02:05:01.525+01:00  INFO 11372 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-02-12T02:05:01.526+01:00  INFO 11372 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 7381 ms
+2024-02-12T02:05:02.112+01:00  INFO 11372 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-02-12T02:05:02.372+01:00  INFO 11372 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.13.Final
+2024-02-12T02:05:02.381+01:00  INFO 11372 --- [main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2024-02-12T02:05:03.494+01:00  INFO 11372 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-02-12T02:05:03.607+01:00  INFO 11372 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-02-12T02:05:04.637+01:00  INFO 11372 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@22686ddb
+2024-02-12T02:05:04.646+01:00  INFO 11372 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-02-12T02:05:08.132+01:00  INFO 11372 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-02-12T02:05:08.140+01:00  INFO 11372 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-02-12T02:05:12.142+01:00  INFO 11372 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2024-02-12T02:05:12.199+01:00  INFO 11372 --- [main] d.aittr.g_31_2_shop.G312ShopApplication  : Started G312ShopApplication in 19.777 seconds (process running for 22.153)
+2024-02-12T02:05:34.415+01:00  INFO 11372 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-02-12T02:05:34.417+01:00  INFO 11372 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-02-12T02:05:34.423+01:00  INFO 11372 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
+2024-02-12T02:05:34.517+01:00  INFO 11372 --- [http-nio-8080-exec-2] d.a.g_31_2_shop.logging.AspectLogging    : Вызван метод getAllActiveProducts.
+2024-02-12T02:05:40.001+01:00  INFO 11372 --- [pool-4-thread-1] d.a.g.scheduling.ScheduleExecutor        : Method getAllActiveProducts called
+2024-02-12T02:05:50.006+01:00  INFO 11372 --- [pool-4-thread-1] d.a.g.scheduling.ScheduleExecutor        : Method getAllActiveProducts called
+2024-02-12T02:06:00.013+01:00  INFO 11372 --- [pool-4-thread-1] d.a.g.scheduling.ScheduleExecutor        : Method getAllActiveProducts called
+2024-02-12T02:06:10.002+01:00  INFO 11372 --- [pool-4-thread-1] d.a.g.scheduling.ScheduleExecutor        : Method getAllActiveProducts called
+2024-02-12T02:06:11.037+01:00  INFO 11372 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-02-12T02:06:11.043+01:00  INFO 11372 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-02-12T02:06:11.064+01:00  INFO 11372 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-02-12T02:09:29.032+01:00  INFO 216 --- [main] d.aittr.g_31_2_shop.G312ShopApplication  : Starting G312ShopApplication using Java 17.0.9 with PID 216 (C:\AIT TR\BackEnd\g_31_2_shop\target\classes started by AIT TR Student in C:\AIT TR\BackEnd\g_31_2_shop)
+2024-02-12T02:09:29.042+01:00  INFO 216 --- [main] d.aittr.g_31_2_shop.G312ShopApplication  : No active profile set, falling back to 1 default profile: "default"
+2024-02-12T02:09:32.912+01:00  INFO 216 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-02-12T02:09:33.171+01:00  INFO 216 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 232 ms. Found 3 JPA repository interfaces.
+2024-02-12T02:09:36.244+01:00  INFO 216 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2024-02-12T02:09:36.273+01:00  INFO 216 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-02-12T02:09:36.274+01:00  INFO 216 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.15]
+2024-02-12T02:09:36.616+01:00  INFO 216 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-02-12T02:09:36.618+01:00  INFO 216 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 7276 ms
+2024-02-12T02:09:37.345+01:00  INFO 216 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-02-12T02:09:37.653+01:00  INFO 216 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.13.Final
+2024-02-12T02:09:37.664+01:00  INFO 216 --- [main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2024-02-12T02:09:38.987+01:00  INFO 216 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-02-12T02:09:39.069+01:00  INFO 216 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-02-12T02:09:39.954+01:00  INFO 216 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7e3ee128
+2024-02-12T02:09:39.959+01:00  INFO 216 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-02-12T02:09:43.123+01:00  INFO 216 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-02-12T02:09:43.131+01:00  INFO 216 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-02-12T02:09:46.360+01:00  INFO 216 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2024-02-12T02:09:46.395+01:00  INFO 216 --- [main] d.aittr.g_31_2_shop.G312ShopApplication  : Started G312ShopApplication in 18.922 seconds (process running for 20.156)
+2024-02-12T02:09:57.921+01:00  INFO 216 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-02-12T02:09:57.922+01:00  INFO 216 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-02-12T02:09:57.924+01:00  INFO 216 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-02-12T02:09:58.052+01:00  INFO 216 --- [http-nio-8080-exec-1] d.a.g_31_2_shop.logging.AspectLogging    : Вызван метод getAllActiveProducts.
+2024-02-12T02:10:28.079+01:00  INFO 216 --- [pool-4-thread-1] d.a.g.scheduling.ScheduleExecutor        : Method getAllActiveProducts called
+2024-02-12T02:10:42.083+01:00  INFO 216 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-02-12T02:10:42.091+01:00  INFO 216 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-02-12T02:10:42.115+01:00  INFO 216 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
