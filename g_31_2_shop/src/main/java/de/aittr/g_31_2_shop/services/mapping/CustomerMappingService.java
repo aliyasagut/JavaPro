@@ -19,24 +19,32 @@ public class CustomerMappingService {
         this.cartMappingService = cartMappingService;
     }
 
-    public CustomerDto mapCustomerEntityToDto (Customer customer){
+    /*
+    Домашнее задание 15
+    1. Добавить покупателю два дополнительных поля - возраст и емейл (и в БД тоже).
+     */
+    public CustomerDto mapCustomerEntityToDto(Customer customer) {
         int id = customer.getId();
         String name = customer.getName();
         CartDto cartDto = cartMappingService.mapCartEntityToDto(customer.getCart());
-        return new CustomerDto(id, name, cartDto);
+        int age = customer.getAge();
+        String email = customer.getEmail();
+        return new CustomerDto(id, name, cartDto, age, email);
     }
 
-    public CommonCustomer mapDtoToCommonCustomer (CustomerDto customerDto) {
-        int id = customerDto.getId();
-        String name = customerDto.getName();
-        Cart cart = cartMappingService.mapDtoToCommonCart(customerDto.getCart());
-        return new CommonCustomer(id, true, name, cart);
+    public CommonCustomer mapDtoToCommonCustomer(CustomerDto dto) {
+        int id = dto.getId();
+        String name = dto.getName();
+        Cart cart = cartMappingService.mapDtoToCommonCart(dto.getCart());
+        int age = dto.getAge();
+        String email = dto.getEmail();
+        return new CommonCustomer(id, true, name, cart, age, email);
     }
 
-    public JpaCustomer mapDtoToJpaCustomer (CustomerDto customerDto) {
-        int id = customerDto.getId();
-        String name = customerDto.getName();
-        JpaCart cart = cartMappingService.mapDtoToJpaCart(customerDto.getCart());
-        return new JpaCustomer(id, true, name, cart);
+    public JpaCustomer mapDtoToJpaCustomer(CustomerDto dto) {
+        String name = dto.getName();
+        int age = dto.getAge();
+        String email = dto.getEmail();
+        return new JpaCustomer(0, true, name, age, email, null);
     }
 }

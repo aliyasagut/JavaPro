@@ -36,12 +36,12 @@ public class ProductController {
     }
 
     @PutMapping
-    public void update(@RequestBody ProductDto dto){
+    public void update(@RequestBody ProductDto dto) {
         service.update(dto);
     }
 
     @DeleteMapping("/{id}")
-    public void deleteById(@PathVariable int id){
+    public void deleteById(@PathVariable int id) {
         service.deleteById(id);
     }
 
@@ -57,9 +57,9 @@ public class ProductController {
 
     // 1 способ - создание метода-обработчика в контроллере, где мы ожидаем ошибки
     // Минус - если в разных контроллерах требуется обрабатывать ошибки одинаково,
-    // то нам придется написать один и тот же обработчик в разных контроллерах.
-    // Плюс: если в разных контроллерах требуется обрабатывать ошибки по-разному, то
-    // такой подход позволяет нам это сделать.
+    // то нам придётся написать один и тот же обработчик в разных контроллерах.
+    // Плюс - если в разных контроллерах требуется обрабатывать ошибки по-разному,
+    // то такой подход позволяет нам это сделать.
     @ExceptionHandler(FirstTestException.class)
     @ResponseStatus(HttpStatus.I_AM_A_TEAPOT)
     public Response handleException(FirstTestException e) {
@@ -80,5 +80,4 @@ public class ProductController {
     public double getAveragePrice() {
         return service.getActiveProductAveragePrice();
     }
-
 }

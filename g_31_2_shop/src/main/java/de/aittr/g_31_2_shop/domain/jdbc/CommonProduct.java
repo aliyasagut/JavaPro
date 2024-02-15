@@ -67,6 +67,8 @@ public class CommonProduct implements Product {
 
     @Override
     public String toString() {
-        return  String.format("ID - %d, Name - %s, price - %f.2, isActive - %s.", id, name, price, isActive ? "yes" : "no");
+        // ИД - 1, наименование - Банан, цена - 120.00, активен - да.
+        return String.format("ИД - %d, наименование - %s, цена - %.2f, активен - %s.",
+                id, name, price, isActive ? "да" : "нет");
     }
 }

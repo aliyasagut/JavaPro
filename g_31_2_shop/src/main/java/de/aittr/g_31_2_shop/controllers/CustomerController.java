@@ -19,17 +19,22 @@ public class CustomerController {
     }
 
     @PostMapping
-    public CustomerDto save(@RequestBody CustomerDto customer){
+    public CustomerDto save(@RequestBody CustomerDto customer) {
         return service.save(customer);
     }
 
     @GetMapping
-    public List<CustomerDto> getAll(){
+    public List<CustomerDto> getAll() {
         return service.getAllActiveCustomers();
     }
 
     @GetMapping("/{id}")
     public CustomerDto getById(@PathVariable int id) {
         return service.getActiveCustomerById(id);
+    }
+
+    @PutMapping("/add_product")
+    public void addProductToCart(@RequestParam int customerId, @RequestParam int productId) {
+        service.addProductToCart(customerId, productId);
     }
 }

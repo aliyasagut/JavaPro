@@ -6,7 +6,7 @@ import java.util.List;
 
 public interface CustomerService {
 
-    CustomerDto save (CustomerDto customer);
+    CustomerDto save(CustomerDto customer);
 
     List<CustomerDto> getAllActiveCustomers();
 
@@ -20,11 +20,11 @@ public interface CustomerService {
 
     void restoreById(int id);
 
-    int getActiveCustomerCount();
+    int getActiveCustomersCount();
 
     double getCartTotalPriceById(int customerId);
 
-    double getAverageProductPriceById(int customeriD);
+    double getAverageProductPriceById(int customerId);
 
     void addProductToCart(int customerId, int productId);
 

@@ -11,6 +11,8 @@ public class CommonCustomer implements Customer {
     private boolean isActive;
     private String name;
     private Cart cart;
+    private int age;
+    private String email;
 
     public CommonCustomer() {
         this.isActive = true;
@@ -21,6 +23,45 @@ public class CommonCustomer implements Customer {
         this.isActive = isActive;
         this.name = name;
         this.cart = cart;
+    }
+
+    public CommonCustomer(int id, boolean isActive, String name, Cart cart, int age, String email) {
+        this.id = id;
+        this.isActive = isActive;
+        this.name = name;
+        this.cart = cart;
+        this.age = age;
+        this.email = email;
+    }
+
+    @Override
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    @Override
+    public void setActive(boolean active) {
+        isActive = active;
+    }
+
+    @Override
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    @Override
+    public void setCart(Cart cart) {
+        this.cart = cart;
+    }
+
+    @Override
+    public int getAge() {
+        return age;
+    }
+
+    @Override
+    public String getEmail() {
+        return email;
     }
 
     @Override
@@ -48,36 +89,23 @@ public class CommonCustomer implements Customer {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         CommonCustomer that = (CommonCustomer) o;
-        return id == that.id && isActive == that.isActive && Objects.equals(name, that.name) && Objects.equals(cart, that.cart);
-    }
-
-    @Override
-    public String toString() {
-        return String.format("Customer: id - %d, name - %s, isActive - %s, cart: %n%s", id, name, isActive? "yes" : "no", cart);
+        return id == that.id && isActive == that.isActive && age == that.age && Objects.equals(name, that.name) && Objects.equals(cart, that.cart) && Objects.equals(email, that.email);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, isActive, name, cart);
+        return Objects.hash(id, isActive, name, cart, age, email);
     }
 
     @Override
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    @Override
-    public void setActive(boolean active) {
-        isActive = active;
-    }
-
-    @Override
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    @Override
-    public void setCart(Cart cart) {
-        this.cart = cart;
+    public String toString() {
+        return "CommonCustomer{" +
+                "id=" + id +
+                ", isActive=" + isActive +
+                ", name='" + name + '\'' +
+                ", cart=" + cart +
+                ", age=" + age +
+                ", email='" + email + '\'' +
+                '}';
     }
 }

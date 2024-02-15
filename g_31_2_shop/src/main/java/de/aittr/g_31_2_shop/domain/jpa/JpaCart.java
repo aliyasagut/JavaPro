@@ -4,6 +4,8 @@ import de.aittr.g_31_2_shop.domain.interfaces.Cart;
 import de.aittr.g_31_2_shop.domain.interfaces.Customer;
 import de.aittr.g_31_2_shop.domain.interfaces.Product;
 import jakarta.persistence.*;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -12,6 +14,13 @@ import java.util.Objects;
 @Entity
 @Table(name = "cart")
 public class JpaCart implements Cart {
+
+    /*
+    Домашнее задание 17
+    1. Применить логирование в энтити-классах, залогировать вызов конструкторов, методов (без применения АОП).
+    Добавил только пару примеров.
+     */
+    private static Logger logger = LoggerFactory.getLogger(JpaCart.class);
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -31,9 +40,11 @@ public class JpaCart implements Cart {
     private JpaCustomer customer;
 
     public JpaCart() {
+        logger.info("Cart without id specification created");
     }
 
     public JpaCart(int id, List<JpaProduct> products) {
+        logger.info("Cart with id [{}] created", id);
         this.id = id;
         this.products = products;
     }
@@ -44,23 +55,32 @@ public class JpaCart implements Cart {
     }
 
     @Override
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    @Override
     public List<Product> getProducts() {
-        // TODO переделать
-        return new ArrayList<>(products);
+        return new ArrayList<>(products
+                .stream()
+                .filter(p -> p.isActive())
+                .toList());
     }
 
     @Override
     public void addProduct(Product product) {
         try {
             products.add((JpaProduct) product);
+            logger.info("Product id [{}] added to cart id [{}]",
+                    product.getId(), id);
         } catch (Exception e) {
-            throw new IllegalArgumentException("В корзину JpaCart передан несовместимый тип продукта");
+            throw new IllegalArgumentException("В корзину JpaCart помещён несовместимый тип продукта!");
         }
     }
 
     @Override
     public void deleteProductById(int productId) {
-        // TODO проверить работу на практике и переделать
+        // TODO проверить работу на практике и при необходимости переделать
         products.removeIf(p -> p.getId() == productId);
     }
 
@@ -74,7 +94,7 @@ public class JpaCart implements Cart {
         return products
                 .stream()
                 .filter(p -> p.isActive())
-                .mapToDouble(p -> p.getPrice())
+                .mapToDouble(p -> p.getPrice())// [Apple:90, Banana:120, Orange:200] -> [90, 120, 200]
                 .sum();
     }
 
@@ -83,22 +103,17 @@ public class JpaCart implements Cart {
         return products
                 .stream()
                 .filter(p -> p.isActive())
-                .mapToDouble(p -> p.getPrice())
+                .mapToDouble(p -> p.getPrice())// [Apple:90, Banana:120, Orange:200] -> [90, 120, 200]
                 .average()
                 .orElse(0);
     }
 
-    public Customer getCustomer() {
-        return customer;
-    }
-
-    @Override
-    public void setId(int id) {
-        this.id = id;
-    }
-
     public void setProducts(List<JpaProduct> products) {
         this.products = products;
+    }
+
+    public Customer getCustomer() {
+        return customer;
     }
 
     public void setCustomer(JpaCustomer customer) {
@@ -123,7 +138,6 @@ public class JpaCart implements Cart {
         return "JpaCart{" +
                 "id=" + id +
                 ", products=" + products +
-                ", customer=" + customer +
                 '}';
     }
 }

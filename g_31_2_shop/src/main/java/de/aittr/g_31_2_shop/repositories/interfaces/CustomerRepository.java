@@ -12,7 +12,7 @@ public interface CustomerRepository {
 
     Customer getById(int id);
 
-    void update(Customer product);
+    void update(Customer customer);
 
     void deleteById(int id);
 }

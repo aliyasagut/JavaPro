@@ -33,7 +33,6 @@ public class CommonProductService implements ProductService {
                 .stream()
                 .map(p -> mappingService.mapProductEntityToDto(p))
                 .toList();
-
     }
 
     @Override

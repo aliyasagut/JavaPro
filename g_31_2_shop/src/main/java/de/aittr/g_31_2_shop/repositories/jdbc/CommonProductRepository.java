@@ -24,8 +24,8 @@ public class CommonProductRepository implements ProductRepository {
     public Product save(Product product) {
         try (Connection connection = getConnection()) {
 
-            String query = String.format(Locale.US, "INSERT INTO `product` (`name`, `price`, `is_active`)" +
-                    " VALUES ('%s', '%.2f', '1');", product.getName(), product.getPrice());
+            String query = String.format(Locale.US, "INSERT INTO `product` (`name`, `price`, `is_active`) " +
+                    "VALUES ('%s', '%.2f', '1');", product.getName(), product.getPrice());
             connection.createStatement().execute(query);
 
             query = "select id from product order by id desc limit 1;";
@@ -47,10 +47,9 @@ public class CommonProductRepository implements ProductRepository {
 
             String query = "select id, name, price from product where is_active = 1;";
             ResultSet resultSet = connection.createStatement().executeQuery(query);
-
             List<Product> products = new ArrayList<>();
 
-            while (resultSet.next()){
+            while (resultSet.next()) {
                 int id = resultSet.getInt(ID);
                 String name = resultSet.getString(NAME);
                 double price = resultSet.getDouble(PRICE);
@@ -59,7 +58,6 @@ public class CommonProductRepository implements ProductRepository {
             }
 
             return products;
-
         } catch (Exception e) {
             throw new RuntimeException(e);
         }

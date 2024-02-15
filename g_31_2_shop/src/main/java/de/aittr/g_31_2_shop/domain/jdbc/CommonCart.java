@@ -15,13 +15,13 @@ public class CommonCart implements Cart {
     public CommonCart() {
     }
 
+    public CommonCart(int id) {
+        this.id = id;
+    }
+
     public CommonCart(int id, List<Product> products) {
         this.id = id;
         this.products = products;
-    }
-
-    public CommonCart(int id) {
-        this.id = id;
     }
 
     @Override

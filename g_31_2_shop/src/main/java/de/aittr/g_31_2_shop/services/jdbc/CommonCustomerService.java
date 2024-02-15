@@ -60,7 +60,7 @@ public class CommonCustomerService implements CustomerService {
     }
 
     @Override
-    public int getActiveCustomerCount() {
+    public int getActiveCustomersCount() {
         return 0;
     }
 
@@ -70,7 +70,7 @@ public class CommonCustomerService implements CustomerService {
     }
 
     @Override
-    public double getAverageProductPriceById(int customeriD) {
+    public double getAverageProductPriceById(int customerId) {
         return 0;
     }
 

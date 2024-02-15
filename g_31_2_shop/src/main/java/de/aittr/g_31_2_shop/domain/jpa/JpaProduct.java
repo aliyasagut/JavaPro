@@ -15,6 +15,13 @@ public class JpaProduct implements Product {
     @Column(name = "id")
     private int id;
 
+    // Pear - OK
+    // pear - X
+    // PEAR - X
+    // PEar - X
+    // Pe - X
+    // Pear7 - X
+    // Pear# - X
     @Column(name = "name")
 //    @NotNull
 //    @NotBlank
@@ -45,8 +52,17 @@ public class JpaProduct implements Product {
     }
 
     @Override
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    @Override
     public String getName() {
         return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     @Override
@@ -54,22 +70,13 @@ public class JpaProduct implements Product {
         return price;
     }
 
+    public void setPrice(double price) {
+        this.price = price;
+    }
+
     @Override
     public boolean isActive() {
         return isActive;
-    }
-
-    @Override
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public void setPrice(double price) {
-        this.price = price;
     }
 
     public void setActive(boolean active) {

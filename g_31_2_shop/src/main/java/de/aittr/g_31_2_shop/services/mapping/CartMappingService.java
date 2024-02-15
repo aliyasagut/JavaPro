@@ -30,7 +30,7 @@ public class CartMappingService {
         return new CartDto(id, products);
     }
 
-    public CommonCart mapDtoToCommonCart (CartDto dto) {
+    public CommonCart mapDtoToCommonCart(CartDto dto) {
         int id = dto.getId();
         List<Product> products = new ArrayList<>(dto.getProducts()
                 .stream()
@@ -39,7 +39,7 @@ public class CartMappingService {
         return new CommonCart(id, products);
     }
 
-    public JpaCart mapDtoToJpaCart (CartDto dto) {
+    public JpaCart mapDtoToJpaCart(CartDto dto) {
         int id = dto.getId();
         List<JpaProduct> products = dto.getProducts()
                 .stream()
@@ -47,5 +47,4 @@ public class CartMappingService {
                 .toList();
         return new JpaCart(id, products);
     }
-
 }

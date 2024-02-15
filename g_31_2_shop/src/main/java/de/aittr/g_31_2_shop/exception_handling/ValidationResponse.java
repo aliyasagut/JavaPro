@@ -1,6 +1,6 @@
 package de.aittr.g_31_2_shop.exception_handling;
 
-public class ValidationResponse extends Response{
+public class ValidationResponse extends Response {
 
     private String cause;
 
